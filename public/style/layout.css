@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:cursive;
+}
+html,
+body{
+    height: 100%;
+    margin: 0;
+}
+body {
+    background-color: #DBB5B5;
+    display: flex;
+    flex-direction: column;
+}
+main{
+    padding-bottom: 2em;
+    flex:1;
+    position: relative;
+}
+header {
+    padding-bottom: 2em;
+}
+footer {
+    position: relative;
+    min-height: 150px;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #987070;
+}
+footer .social_icon li{
+    list-style: none;
+    padding: 2em
+}
+.social_icon li a{
+    color: #F1E5D1;
+    font-size: 2em;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+footer .social_icon{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+footer .social_icon li a:hover {
+    transform: translateY(-15px);
+    color: #b09c84;
+}
+.blogBox{
+    background-color: #f0d2d2;
+    padding: 1.5em;
+    border-radius: 2em;
+    border: #987070 solid 5px;
+    width: 50%;
+    margin-left: 25%;
+    margin-bottom: 1em;
+}
+.firstText {
+    text-shadow: 1px 1px red, -1px -1px blue;
+}
+.middleBox{
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.sideBy{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.sideBy button{
+    margin: 5px;
+    padding: 8px;
+}
+.btn-light:hover {
+    margin: 4px 4px;
+    font-size: 12px;
+    display: inline-block;
+    transition: 0.5s;
+}
+.updateBlog{
+    position: absolute;
+    padding: 2em;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+}
+.updateBlog h1{
+    padding-bottom: 1em;
+}
+.child-updateBlog{
+    padding: 2em;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    border: #987070 solid 5px;
+    border-radius: 2em;
+}

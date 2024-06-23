@@ -1,0 +1,18 @@
+    <%-include("partials/header.ejs") %>
+    <div>
+        <p>
+            <h1>Create your Post</h1>
+        </p>
+    </div>
+    <form action="/blog" method="POST">
+        <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Name</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" name="name" placeholder="name" required>
+        </div>
+        <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Post Content</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" name="content" rows="3" placeholder="blog" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-light">Post</button>
+    </form>
+<%-include("partials/footer.ejs") %>

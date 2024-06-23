@@ -1,0 +1,33 @@
+<%-include("partials/header.ejs") %>
+<% if(locals.nameArr) { %>
+  <% if(nameArr.length != 0) { %>
+    <% for(var i = 0; i < nameArr.length; i++) { %>
+      <div class="blogBox">
+        <h4><%= nameArr[i] %></h4>
+        <p>
+          <h6><%= contentArr[i] %></h6>
+        </p>
+        <div class="sideBy">
+        <form action="/update" method="POST">
+          <input type="hidden" name = "blogDate" value = "<%= contentArr[i] %>">
+          <input type="hidden" name = "index" value = "<%= i %>">
+          <button type="submit" class="btn btn-outline-dark">Update</button> 
+        </form>
+        <form action="/delete" method="POST">
+          <input type="hidden" name = "index" value = "<%= i %>">
+          <button type="submit" class="btn btn-outline-dark">Delete</button> 
+        </form>
+        </div>
+      </div>
+    <% } %>
+  <% } else { %>
+    <div class="middleBox">
+    <h1 class="firstText">View and Create Blog in this website</h1>
+    </div>
+  <% } %>
+<% } else { %>
+  <div class="middleBox">
+  <h1 class="firstText">View and Create Blog in this website</h1>
+  </div>
+<% } %> 
+<%-include("partials/footer.ejs") %>

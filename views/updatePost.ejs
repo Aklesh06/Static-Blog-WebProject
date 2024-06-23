@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/layout.css">
+    <title>Update Post</title>
+</head>
+<body>
+    <main class="container">
+    <div class="updateBlog">
+    <h1 class="updateh1">Update Blog</h1>
+    <div class="child-updateBlog">
+    <form action="/updateComplete" method="POST">
+        <input type="hidden" name="pos" value="<%= index %>">
+        <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Old Blog Content</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" value="<%= oldBlog %>" readonly>
+          </div>
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">New Blog Content</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" name="newBlog" placeholder="Enter modified Blog">
+        </div>
+        <button type="submit" class="btn btn-light">Apply</button>
+    </form>
+    </div>
+    </div>
+
+<%-include("partials/footer.ejs") %>
